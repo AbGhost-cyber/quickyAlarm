@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottomsheet_bg"
+        android:padding="10dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cancel_bottomsheet"
+            android:layout_marginStart="4dp"
+            android:contentDescription="@string/cancel"
+            android:src="@drawable/ic_close"
+            android:layout_alignParentStart="true"/>
+
+        <ImageView
+            android:contentDescription="@string/create"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Ok_bottomsheet"
+            android:layout_marginEnd="4dp"
+            android:layout_gravity="end"
+            android:layout_alignEnd="@id/cancel_bottomsheet"
+            android:layout_alignParentEnd="true"
+           android:src="@drawable/ic_check"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/alarm_time"
+            android:textSize="29sp"
+            android:textColor="@color/task_time_color1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/open_sans" />
+
+    <TimePicker
+        android:layout_width="wrap_content"
+        android:id="@+id/timePicker"
+        android:background="@color/task_time_color1"
+        android:layout_below="@id/alarm_time"
+        android:layout_centerHorizontal="true"
+        android:timePickerMode="clock"
+        android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:background="@color/background_color1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/repeat"
+            android:fontFamily="@font/open_sans"
+            android:textColor="@color/task_time_color1"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginStart="5dp"
+            android:padding="10dp"
+            android:id="@+id/repeat"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans"
+            android:textColor="#9EFFFFFF"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:drawableEnd="@drawable/ic_chevron_right"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="end"
+            android:drawablePadding="10dp"
+            android:layout_marginStart="5dp"
+            android:padding="10dp"
+            android:id="@+id/repeat_items"
+            tools:ignore="RelativeOverlap" />
+
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>
